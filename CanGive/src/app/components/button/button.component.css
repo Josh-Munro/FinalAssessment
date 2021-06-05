@@ -1,0 +1,9 @@
+button {
+    height: 100px;
+    width: 163px;
+    font-family: 'stika';
+    background-color: #F9A03F;
+    border: none;
+    border-radius: 35px;
+    font-size: 20px;
+}

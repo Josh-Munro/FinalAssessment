@@ -3,8 +3,10 @@ img {
     width: 100%;
 }
 
+
 a {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Sitka Banner';
     font-weight: bold;
 }
 
@@ -17,12 +19,4 @@ a {
 }
 
 
-/* Navbar styling */
 
-ul {
-    list-style: none;
-}
-
-li {
-    float: right;
-}

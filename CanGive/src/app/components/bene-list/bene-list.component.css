@@ -1,0 +1,12 @@
+h1 {
+    font-family: 'Sitka';
+    font-weight: 'semi-bold';
+    color: white;
+}
+
+.beneList-container {
+    padding: 0 100px;
+    background-color: #474747;
+    height: calc(100vh - 100px);
+}
+
