@@ -1,0 +1,28 @@
+
+img {
+    width: 100%;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.nav-background {
+    background-color: #404E7C;
+}
+
+.dark-background {
+    background-color: #474747;
+}
+
+
+/* Navbar styling */
+
+ul {
+    list-style: none;
+}
+
+li {
+    float: right;
+}

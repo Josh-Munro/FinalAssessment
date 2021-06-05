@@ -1,0 +1,41 @@
+/* Login styling */
+
+.container {
+    display: flex;
+    background-color: red;
+    height: calc(100vh - 60px);
+    padding: 0 !important;
+}
+
+.left-content {
+    background-color: white;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.left-content img {
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.right-content{
+    padding: 60px;
+}
+
+.right-content p{
+    position: relative;
+}
+
+button {
+    margin-top: 30px;
+}
+
+/* Mobile Phone */
+
+@media only screen and (max-width: 700px)
+{
+    .container {
+        flex-direction: column;
+    }
+}
