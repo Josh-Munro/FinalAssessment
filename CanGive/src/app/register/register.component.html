@@ -9,13 +9,16 @@
         <form action="" class="login-form">
             <label for="email">*Email</label>
             <br>
-            <input type="text">
+            <input [(ngModel)]="registerUserData.Email" name="email" type="text" target="blank" placeholder="email" required>
             <br>
             <label for="email">*Password</label>
             <br>
-            <input type="text">
+            <input [(ngModel)]="registerUserData.Password" name="password" type="text" placeholder="password" required>
             <br>
-            <button>Login</button>
+            <label for="">IsAdmin</label>
+            <input [(ngModel)]="registerUserData.IsAdmin" name="isAdmin" type="checkbox">
+            <br>
+            <button (click)="registerUser()">Register</button>
         </form>
     </div>
 </div>

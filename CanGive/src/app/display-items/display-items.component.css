@@ -1,0 +1,23 @@
+.items-container {
+    background-color: hsl(0, 0%, 28%);
+    height: 250px;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 23px;
+}
+
+h2 {
+    color: black;
+    font-family: 'Sitka Banner' !important;
+}
+
+li {
+    list-style-type: none;
+    color:#C8EDF9;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Sitka Banner' !important;
+    font-size: 23px;
+    font-weight: bold;
+    
+}

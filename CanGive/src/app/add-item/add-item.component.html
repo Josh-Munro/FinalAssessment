@@ -1,0 +1,25 @@
+
+
+<!-- ********************************************Adding an item******************************************* -->
+<div class="add-item">
+
+    <h1>Create an item</h1>
+    <!-- Creating the form -->
+    <form class="form">
+        <!-- Item name -->
+        <div class="form-group">
+            <label for="">Item Name</label>
+            <input [(ngModel)]="itemData.Name" name="ItemName" type="text" class="form-control rounded-0" target="blank" placeholder="Item Name" required>
+        </div>
+        
+        <!-- Item description field -->
+        <div class="form-group">
+            <label for="">Item Description</label>
+            <input [(ngModel)]="itemData.Description" name="ItemDescription" type="text" class="form-control rounded-0" placeholder="Item Description" required>
+        </div>
+
+        <button (click)="createItem()">Add Item</button>
+    </form>
+
+    <h3 *ngIf="itemCreated">Item Created Successfully</h3>
+</div>

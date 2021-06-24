@@ -1,12 +1,29 @@
-<div class="dashboard-container">
-    <h1 *ngIf="isAdmin">Admin Dashboard</h1>
-    <app-bene-list></app-bene-list>
+
+<h3 class="userName">Welcome {{userName}}</h3> <br>
+<h3 class="Tokens">Tokens: {{tokenAmount}}</h3>
+
+<div class="title">
+    <h1 *ngIf="showAdminBoard">Administrator Dashboard</h1>
+    <h1 *ngIf="!showAdminBoard">Beneficiary Dashboard</h1>
+    
 </div>
 
-<div class="dashboard-button-container">
-    <app-button></app-button>
-    <app-button></app-button>
-    <app-button></app-button>
+
+<div class="dashboard-container">
+
+    <app-display-items></app-display-items>
+
+    <div class="dashboard-button-container">
+        <app-add-item *ngIf="showAdminBoard"></app-add-item>
+        <app-redeem-token *ngIf="!showAdminBoard"></app-redeem-token>
+    </div>
+
+    
+
 </div>
+
+
+
+
 
 

@@ -4,17 +4,20 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { UserStorageService } from '../user-storage.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  selector: 'app-redeem-token',
+  templateUrl: './redeem-token.component.html',
+  styleUrls: ['./redeem-token.component.css']
 })
-export class LoginComponent implements OnInit {
+export class RedeemTokenComponent implements OnInit {
 
-  loginUserData = {
-    Email: {
+  itemData = {
+    Name: {
       type: String
     },
-    Password: {
+    PromoCode: {
+      type: String
+    },
+    UserId : {
       type: String
     }
   }
@@ -23,30 +26,27 @@ export class LoginComponent implements OnInit {
 
   failed = false;
 
-  constructor(private _userStorage: UserStorageService, private _auth: AuthServiceService, private _router: Router) { }
+  constructor(private _auth: AuthServiceService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
-  loginUser() {
-    console.log(this.loginUserData)
+  redeemItem() {
+    console.log(this.itemData)
 
-    this._auth.loginUser(this.loginUserData)
+    this._auth.redeemItem(this.itemData)
       .subscribe(
         res => {
           console.log(res)
           console.log('It works')
-          this.failed = true;
-          this._userStorage.saveUser(res);
           this.failed = false;
           this._router.navigate(['/dashboard']);
 
         },
         err => {
           console.log(err)
-          
-          
-          //this.isSuccessful = false
+          this.failed = true;
+          console.log('Error');
         }
       )
   }

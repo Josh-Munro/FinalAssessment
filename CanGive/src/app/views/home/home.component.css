@@ -1,3 +1,40 @@
 img {
     width: 100%;
 }
+
+/* Grid-container */
+
+.grid-container {
+    margin-top: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+/* About */
+
+.about {
+    background-color: #69B578;
+}
+
+.services {
+    background-color: #F9583F;
+}
+
+/* Left box */
+
+.left-box {
+    width: 100%;
+}
+
+.right-box {
+    width: 100%;
+}
+
+/* Mobile display */
+
+@media only screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+  }

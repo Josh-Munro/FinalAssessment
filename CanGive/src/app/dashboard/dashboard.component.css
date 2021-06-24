@@ -1,4 +1,10 @@
 
+.userName {
+    float: right;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
 .dashboard-container {
     padding-top: 30px;
     display: flex;
@@ -17,6 +23,15 @@ h1 {
     font-family: 'Sitka Banner' !important;
     font-weight: bold;
     color: #363635;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.title {
+    text-align: center;
+    padding: 50px;
 }
 
 /* Mobile Phone Size */

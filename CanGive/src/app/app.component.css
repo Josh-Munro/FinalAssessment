@@ -3,6 +3,11 @@ img {
     width: 100%;
 }
 
+/* Headings */
+
+h1, h2, h3, h4 {
+    font-family: 'Sitka Banner';
+}
 
 a {
     /* font-family: 'Roboto', sans-serif; */

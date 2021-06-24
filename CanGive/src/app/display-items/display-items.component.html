@@ -1,0 +1,16 @@
+
+<h2>Items</h2>
+
+<div class="items-container">
+    <!-- New row -->
+<div class="row mt-5">
+    <!-- Looping and displaying each item from the database -->
+    <div class="col-md-4 mb-3" *ngFor=" let Item of ItemData">
+       
+                <!-- Displaying item name -->
+                <li>{{Item.Name}} <br> {{Item.PromoCode}}</li>
+         
+    </div>
+</div>
+</div>
+
