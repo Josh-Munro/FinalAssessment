@@ -8,6 +8,7 @@ import {AddItemService} from '../add-item.service';
 })
 export class DisplayItemsComponent implements OnInit {
 
+  //Item data array
   ItemData = [{
     Name: {
       type: String
@@ -20,8 +21,10 @@ export class DisplayItemsComponent implements OnInit {
     }
   }]
 
+  //Add Item Service
   constructor(private _itemService: AddItemService) { }
 
+  //Getting items
   ngOnInit(): void {
     this._itemService.getItems()
       .subscribe(

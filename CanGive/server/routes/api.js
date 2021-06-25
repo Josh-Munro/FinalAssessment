@@ -76,7 +76,7 @@ router.post('/redeemItem', (req, res) => {
                     res.status(401).send('Invalid PromoCode')
                 } else {
 
-                    User.findOne({Id: itemData.Id}, (error, user) => {
+                    User.findOne({Name: itemData.Id}, (error, user) => {
                         if (error) {
                             console.log('Oppsie');
                             console.log(error)

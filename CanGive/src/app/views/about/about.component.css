@@ -1,0 +1,36 @@
+
+.header h1 {
+    text-align: center;
+}
+
+.header img {
+    width: 100%;
+}
+
+.details-header {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 50px;
+}
+
+.box {
+    width: 100%;
+    background-color: #474747;
+    text-align: center;
+    color: white;
+}
+
+.box2 {
+    background-color: orange;
+    text-align: center;
+}
+
+.grid-container-3-col {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}

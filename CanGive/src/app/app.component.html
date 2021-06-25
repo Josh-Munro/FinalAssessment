@@ -3,6 +3,7 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="#">CanGive</a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navigation bar -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/about" href="about">About</a>
@@ -16,11 +17,15 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/dashboard" href="register">Dashboard</a>
           </li>
+          <li class="nav-item signout">
+            <a class="nav-link active" aria-current="page" (click)="signOut" routerLink="/login" href="register">Signout</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <div class="container">
+    <!-- Router outlet is important -->
     <router-outlet></router-outlet>
   </div>
 </div>

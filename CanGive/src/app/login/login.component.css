@@ -2,33 +2,42 @@
 
 .container {
     display: flex;
-    background-color: white;
+    background-color: #69B578;
     height: calc(100vh - 60px);
     padding: 0 !important;
 }
 
+/* Left-content */
 .left-content {
     background-color: white;
-    width: 50%;
+    width: 70%;
     margin: 0;
     padding: 0;
 }
 
+/* Left-content image */
 .left-content img {
     width: 100%;
     height: calc(100vh - 60px);
 }
 
+/* Right-content */
 .right-content{
     padding: 60px;
 }
 
+/* Right-content paragraph */
 .right-content p{
     position: relative;
 }
 
+/* Button stlying */
 button {
     margin-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: none;
+    padding: 12px;
 }
 
 

@@ -8,4 +8,10 @@ import {Router} from '@angular/router';
 })
 export class AppComponent {
   title = 'CanGive';
+
+  //Sign out button
+  signOut() {
+    localStorage.clear();
+    console.log('Signout');
+  }
 }

@@ -1,17 +1,26 @@
+<!-- Content container -->
 <div class="right-content">
     <h1>Redeem Item</h1>
     <p>Redeem a item</p>
+    <p>Type the item you want to redeem</p>
+    <p>& it's PromoCode</p>
     <hr>
+    <!-- Form -->
     <form action="" class="login-form">
         <label for="item Name">*Item Name</label>
         <br>
+        <!-- Passing in the item data name -->
         <input [(ngModel)]="itemData.Name" name="email" type="text">
         <br>
         <label for="item PromoCode">*PromoCode</label>
         <br>
+        <!-- Passing in the item data promo code -->
         <input [(ngModel)]="itemData.PromoCode" name="password" type="text">
         <br>
+        <!-- When button is clicked -->
         <button (click)="redeemItem()">Redeem</button>
+        <!-- Messages when item attempted to be Redeemeed -->
         <h1 *ngIf="failed">Could not redeem item</h1>
+        <h1 *ngIf="success">Redeemeed item</h1>
     </form>
 </div>

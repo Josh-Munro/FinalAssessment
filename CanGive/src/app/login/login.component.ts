@@ -10,6 +10,7 @@ import { UserStorageService } from '../user-storage.service';
 })
 export class LoginComponent implements OnInit {
 
+  //Login user data
   loginUserData = {
     Email: {
       type: String
@@ -23,14 +24,17 @@ export class LoginComponent implements OnInit {
 
   failed = false;
 
+  //Constructor passing in User storage service and auth service
   constructor(private _userStorage: UserStorageService, private _auth: AuthServiceService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
+  // Login user method
   loginUser() {
     console.log(this.loginUserData)
 
+    // Passing login information to auth
     this._auth.loginUser(this.loginUserData)
       .subscribe(
         res => {

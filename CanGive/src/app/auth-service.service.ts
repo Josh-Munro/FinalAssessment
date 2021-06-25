@@ -35,8 +35,9 @@ export class AuthServiceService {
     Name: { type: StringConstructor; }; PromoCode: { type: StringConstructor;} ; UserId: {type: StringConstructor;}
   }) {
   console.log(itemData);
-  itemData.UserId = (this.userStorage.getUser()).UserId;
+  itemData.UserId = (this.userStorage.getUser())._id;
   console.log('Redeeming item')
+  console.log(itemData.UserId);
   return this.http.post(this._redeemItemUrl, itemData)
   
 }

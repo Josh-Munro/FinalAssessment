@@ -33,6 +33,7 @@ export class AddItemComponent implements OnInit {
   createItem() {
     console.log('Button works');
     console.log(this.itemData);
+    //Getting item data and passing it through
     this._item.createItem(this.itemData)
     .subscribe(
       res => {
@@ -40,6 +41,7 @@ export class AddItemComponent implements OnInit {
        //If successful item is created
        this.itemCreated = true;
        console.log('Success')
+       //Reloading the page
        window.location.reload();
       },
       err => console.log(err)

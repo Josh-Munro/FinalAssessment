@@ -2,14 +2,15 @@
 
 .container {
     display: flex;
-    background-color: red;
+    background-color: #69B578;
     height: calc(100vh - 60px);
     padding: 0 !important;
 }
 
+/***************************** Left content styling ******************************/
 .left-content {
     background-color: white;
-    width: 50%;
+    width: 70%;
     margin: 0;
     padding: 0;
 }
@@ -19,6 +20,8 @@
     height: calc(100vh - 60px);
 }
 
+/***************************** Right content styling ******************************/
+
 .right-content{
     padding: 60px;
 }
@@ -27,8 +30,14 @@
     position: relative;
 }
 
+/***************************** Button styling ******************************/
+
 button {
     margin-top: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border-style: none;
+    padding: 12px;
 }
 
 /* Mobile Phone */

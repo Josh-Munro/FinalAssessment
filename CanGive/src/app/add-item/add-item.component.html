@@ -18,8 +18,10 @@
             <input [(ngModel)]="itemData.Description" name="ItemDescription" type="text" class="form-control rounded-0" placeholder="Item Description" required>
         </div>
 
+        <!-- Create item button click -->
         <button (click)="createItem()">Add Item</button>
     </form>
 
+    <!-- If Item is created display this message -->
     <h3 *ngIf="itemCreated">Item Created Successfully</h3>
 </div>

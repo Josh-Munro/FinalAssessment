@@ -10,6 +10,7 @@ import { UserStorageService } from '../user-storage.service';
 })
 export class RedeemTokenComponent implements OnInit {
 
+  //User and item Data
   itemData = {
     Name: {
       type: String
@@ -26,11 +27,18 @@ export class RedeemTokenComponent implements OnInit {
 
   failed = false;
 
-  constructor(private _auth: AuthServiceService, private _router: Router) { }
+  success = false;
+
+  //Constructor passing AuthService, UserStorageServie and Router
+  constructor(private _auth: AuthServiceService, private _userStorage: UserStorageService, private _router: Router) { }
 
   ngOnInit(): void {
+    const user = this._userStorage.getUser();
+    this.itemData.UserId = user._id;
+    console.log(user);
   }
 
+  // Redeeming item method
   redeemItem() {
     console.log(this.itemData)
 
@@ -39,7 +47,9 @@ export class RedeemTokenComponent implements OnInit {
         res => {
           console.log(res)
           console.log('It works')
+          console.log();
           this.failed = false;
+          this.success = true;
           this._router.navigate(['/dashboard']);
 
         },

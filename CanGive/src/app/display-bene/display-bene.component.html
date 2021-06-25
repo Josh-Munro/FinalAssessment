@@ -1,5 +1,14 @@
-<div class="grid-container">
-    <div class="bene-list">
-        <h2>Beneficiaries</h2>
+<h2>Bene</h2>
+
+<div class="items-container">
+    <!-- New row -->
+<div class="row mt-5">
+    <!-- Looping and displaying each beneficiary from the database -->
+    <div class="col-md-4 mb-3" *ngFor=" let Item of ItemData">
+       
+                <!-- Displaying beneficiary name -->
+                <li>{{Item.Email}} <br> {{Item.Password}}</li>
+         
     </div>
+</div>
 </div>

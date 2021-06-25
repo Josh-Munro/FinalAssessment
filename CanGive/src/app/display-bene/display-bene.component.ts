@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddItemService } from '../add-item.service';
 
 @Component({
   selector: 'app-display-bene',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayBeneComponent implements OnInit {
 
-  constructor() { }
+  //Array of Beneficiaries
+  ItemData = [{
+    Email: {
+      type: String
+    },
+    Password: {
+      type: String
+    }
+  }]
 
+  //Constrcutor with Additem Service
+  constructor(private _itemService: AddItemService) { }
+
+  //Getting the beneficiary information
   ngOnInit(): void {
+    this._itemService.getBene()
+      .subscribe(
+        res => this.ItemData = res,
+        err => console.log(err)
+      )
   }
 
 }

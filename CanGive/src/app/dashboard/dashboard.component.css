@@ -1,10 +1,18 @@
 
+/* User Name text */
 .userName {
     float: right;
     font-size: 20px;
     margin-top: 20px;
 }
 
+/* User Token value text */
+.userToken {
+    float: left;
+    font-size: 20px;
+}
+
+/* Dashboard container */
 .dashboard-container {
     padding-top: 30px;
     display: flex;
@@ -12,6 +20,7 @@
     height: 100px;
 }
 
+/* Dashboard button container */
 .dashboard-button-container {
     padding-top: 30px;
     display: flex;
@@ -19,16 +28,20 @@
     width: 50%;
 }
 
+/* H1 Styling */
 h1 {
     font-family: 'Sitka Banner' !important;
     font-weight: bold;
     color: #363635;
 }
 
-.grid-container {
+/* Disply-grid-responsive */
+.display-grid {
     display: grid;
+    grid-template-columns: auto auto;
 }
 
+/* Title */
 .title {
     text-align: center;
     padding: 50px;
@@ -36,7 +49,7 @@ h1 {
 
 /* Mobile Phone Size */
 @media screen and (max-width: 700px) {
-    .dashboard-container {
-        flex-direction: column;
+    .display-grid {
+        grid-template-columns: auto;
     }
 }

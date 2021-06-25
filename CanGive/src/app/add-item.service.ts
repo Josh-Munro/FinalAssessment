@@ -9,6 +9,7 @@ export class AddItemService {
   //Referncing API call
   private _addItemUrl = "http://localhost:3000/api/addItem";
   private _getItemsUrl = "http://localhost:3000/api/getItems";
+  private _getBeneUrl = "http://localhost:3000/api/getBene";
 
   constructor(private http: HttpClient) { }
 
@@ -20,5 +21,10 @@ export class AddItemService {
   //Display Items service
   getItems() {
     return this.http.get<any>(this._getItemsUrl)
+  }
+
+  //Display Bene service
+  getBene() {
+    return this.http.get<any>(this._getBeneUrl)
   }
 }

@@ -1,22 +1,33 @@
 
+<!-- User Information such as name and Token Value -->
 <h3 class="userName">Welcome {{userName}}</h3> <br>
-<h3 class="Tokens">Tokens: {{tokenAmount}}</h3>
+<h3 *ngIf="!showAdminBoard" class="userToken">Tokens: {{tokenAmount}}</h3> <br>
 
+<!-- Role based beneficiaries titles -->
 <div class="title">
     <h1 *ngIf="showAdminBoard">Administrator Dashboard</h1>
     <h1 *ngIf="!showAdminBoard">Beneficiary Dashboard</h1>
     
 </div>
 
+<!-- Display grid -->
+<div class="display-grid">
 
-<div class="dashboard-container">
-
+    <!-- Displaying items -->
     <app-display-items></app-display-items>
 
+    <!-- Adding items or redeeming item user interface displays depending on role type -->
     <div class="dashboard-button-container">
         <app-add-item *ngIf="showAdminBoard"></app-add-item>
         <app-redeem-token *ngIf="!showAdminBoard"></app-redeem-token>
+        
     </div>
+
+    <!-- Displaying beneficairies if user role is admin -->
+    <app-display-bene *ngIf="showAdminBoard"></app-display-bene>
+    
+
+   
 
     
 

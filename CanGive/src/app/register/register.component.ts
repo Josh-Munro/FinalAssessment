@@ -25,8 +25,10 @@ export class RegisterComponent implements OnInit {
   constructor(private _auth: AuthServiceService, private _router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
+  // Register user method
   registerUser() {
     console.log(this.registerUserData)
     this._auth.registerUser(this.registerUserData)
@@ -35,7 +37,7 @@ export class RegisterComponent implements OnInit {
       console.log(res)
       //If successful takes user to dashboard
       console.log('Success')
-      this._router.navigate(['/dashboard']);
+      this._router.navigate(['/login']);
      },
      err => console.log(err)
    )

@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './views/about/about.component';
 import { HomeComponent } from './views/home/home.component';
 
+// The different routes in my site
 const routes: Routes = [
   {
     path: 'about', component: AboutComponent

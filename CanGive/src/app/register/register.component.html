@@ -1,23 +1,32 @@
 <div class="container">
+    <!-- Left-content -->
     <div class="left-content">
-        <img src="assets/login.jpg" alt="">
+        <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1084793354%2F960x0.jpg%3Ffit%3Dscale" alt="">
     </div>
+    <!-- Right content -->
     <div class="right-content">
         <h1>Register</h1>
         <p>Create an account</p>
         <hr>
+        <!-- Form -->
         <form action="" class="login-form">
             <label for="email">*Email</label>
             <br>
+            <!-- Register email inpiut field -->
             <input [(ngModel)]="registerUserData.Email" name="email" type="text" target="blank" placeholder="email" required>
             <br>
             <label for="email">*Password</label>
             <br>
+            <!-- Register Password inpiut field -->
             <input [(ngModel)]="registerUserData.Password" name="password" type="text" placeholder="password" required>
             <br>
+            <!-- Note about registering -->
+            <p>Note* When Register as Admin uncheck then check the checkbox since there is a weird bug </p>
             <label for="">IsAdmin</label>
+            <!-- Is Administrator Checkbox -->
             <input [(ngModel)]="registerUserData.IsAdmin" name="isAdmin" type="checkbox">
             <br>
+            <!-- Register user button -->
             <button (click)="registerUser()">Register</button>
         </form>
     </div>
